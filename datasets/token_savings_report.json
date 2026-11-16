@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-11-16T16:24:32Z",
+  "queries_evaluated": 10,
+  "unoptimized_total_tokens": 4160,
+  "optimized_total_tokens": 1710,
+  "tokens_saved": 2450,
+  "token_reduction_pct": 58.89,
+  "context_trimming_strategy": "Jaccard similarity threshold=0.75 + relevance score filtering",
+  "semantic_caching_strategy": "Cosine similarity threshold=0.88 with reverse document ID index",
+  "document_invalidation_tested": true,
+  "cache_stats": {
+    "cached_entries": 9,
+    "hits": 0,
+    "misses": 10,
+    "hit_rate": 0.0,
+    "saved_tokens": 0
+  }
+}

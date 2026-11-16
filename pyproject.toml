@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "enterpriseiq"
+version = "1.0.0"
+description = "Enterprise Knowledge Assistant - Production-Grade RAG System"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "EnterpriseIQ Engineering Team" }]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --import-mode=importlib"
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_mode = "strict"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning"
+]

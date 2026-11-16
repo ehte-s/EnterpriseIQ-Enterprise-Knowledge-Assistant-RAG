@@ -1,0 +1,107 @@
+{
+  "baseline": {
+    "experiment_id": "exp_baseline",
+    "name": "Configuration A (Baseline)",
+    "description": "Fixed-size chunking (1000/100), Dense-only search, top_k=3, No reranker",
+    "configuration": {
+      "retrieval_strategy": "dense",
+      "top_k": 3,
+      "use_reranker": false,
+      "use_cache": false
+    },
+    "retrieval_metrics": {
+      "hit_rate_at_k": 0.6333,
+      "recall_at_k": 0.6056,
+      "precision_at_k": 0.2111,
+      "mrr": 0.6333,
+      "ndcg_at_k": 0.6118,
+      "top_k": 3
+    },
+    "generation_metrics": {
+      "answer_relevance": 0.2321,
+      "faithfulness": 0.77,
+      "citation_correctness": 0.65
+    },
+    "performance_metrics": {
+      "average_latency_ms": 55.12,
+      "p95_latency_ms": 98.57,
+      "total_input_tokens": 8850,
+      "total_output_tokens": 2360,
+      "average_tokens_per_query": 112.1,
+      "estimated_total_cost_usd": 0.02242,
+      "cache_hit_rate": 0.0
+    },
+    "total_questions": 100,
+    "evaluated_at": "2026-11-16T10:47:07.846391+00:00"
+  },
+  "intermediate": {
+    "experiment_id": "exp_intermediate",
+    "name": "Configuration B (Intermediate)",
+    "description": "Recursive chunking (800/100), Hybrid (Dense + BM25, RRF), top_k=5, No reranker",
+    "configuration": {
+      "retrieval_strategy": "hybrid",
+      "top_k": 5,
+      "use_reranker": false,
+      "use_cache": false
+    },
+    "retrieval_metrics": {
+      "hit_rate_at_k": 0.9333,
+      "recall_at_k": 0.8778,
+      "precision_at_k": 0.1867,
+      "mrr": 0.9333,
+      "ndcg_at_k": 0.8903,
+      "top_k": 5
+    },
+    "generation_metrics": {
+      "answer_relevance": 0.2414,
+      "faithfulness": 0.26,
+      "citation_correctness": 0.84
+    },
+    "performance_metrics": {
+      "average_latency_ms": 29.37,
+      "p95_latency_ms": 38.87,
+      "total_input_tokens": 15000,
+      "total_output_tokens": 4000,
+      "average_tokens_per_query": 190.0,
+      "estimated_total_cost_usd": 0.038,
+      "cache_hit_rate": 0.0
+    },
+    "total_questions": 100,
+    "evaluated_at": "2026-11-16T10:47:17.610994+00:00"
+  },
+  "optimized": {
+    "experiment_id": "exp_optimized",
+    "name": "Configuration C (Optimized)",
+    "description": "Recursive chunking (500/50), Hybrid (Dense + BM25, RRF), Cross-Encoder reranker, top_k=5",
+    "configuration": {
+      "retrieval_strategy": "hybrid",
+      "top_k": 5,
+      "use_reranker": true,
+      "use_cache": false
+    },
+    "retrieval_metrics": {
+      "hit_rate_at_k": 0.7667,
+      "recall_at_k": 0.7444,
+      "precision_at_k": 0.1533,
+      "mrr": 0.7667,
+      "ndcg_at_k": 0.7495,
+      "top_k": 5
+    },
+    "generation_metrics": {
+      "answer_relevance": 0.2553,
+      "faithfulness": 0.4,
+      "citation_correctness": 0.78
+    },
+    "performance_metrics": {
+      "average_latency_ms": 614.23,
+      "p95_latency_ms": 1197.77,
+      "total_input_tokens": 10650,
+      "total_output_tokens": 2840,
+      "average_tokens_per_query": 134.9,
+      "estimated_total_cost_usd": 0.02698,
+      "cache_hit_rate": 0.0
+    },
+    "total_questions": 100,
+    "evaluated_at": "2026-11-16T10:48:24.984948+00:00"
+  }
+}

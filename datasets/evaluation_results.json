@@ -1,0 +1,5471 @@
+{
+  "baseline": {
+    "name": "Configuration A (Baseline)",
+    "description": "Fixed chunking (1000/100), Dense-only retrieval, top_k=3, no reranking",
+    "eval_result": {
+      "strategy": "dense",
+      "top_k": 3,
+      "has_reranker": false,
+      "total_evaluated_queries": 90,
+      "retrieval_metrics": {
+        "hit_rate_at_k": 0.9889,
+        "recall_at_k": 0.9889,
+        "precision_at_k": 0.7259,
+        "mrr": 0.9519,
+        "ndcg_at_k": 1.5514,
+        "top_k": 3
+      },
+      "performance_metrics": {
+        "average_latency_ms": 24.22,
+        "p95_latency_ms": 32.28,
+        "total_input_tokens": 0,
+        "total_output_tokens": 0,
+        "average_tokens_per_query": 0.0,
+        "estimated_total_cost_usd": 0.0,
+        "cache_hit_rate": 0.0
+      },
+      "category_breakdown": {
+        "factual": {
+          "count": 25,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.8,
+          "mrr": 1.0
+        },
+        "numerical": {
+          "count": 15,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.6222,
+          "mrr": 0.9667
+        },
+        "multi_doc": {
+          "count": 15,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.8889,
+          "mrr": 0.9667
+        },
+        "contextual": {
+          "count": 15,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.6889,
+          "mrr": 0.9222
+        },
+        "distractor": {
+          "count": 10,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.7,
+          "mrr": 1.0
+        },
+        "metadata": {
+          "count": 10,
+          "hit_rate_at_k": 0.9,
+          "recall_at_k": 0.9,
+          "precision_at_k": 0.5333,
+          "mrr": 0.7833
+        }
+      },
+      "query_evaluations": [
+        {
+          "question_id": "q_001",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 30.06630000891164,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_002",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 19.642100029159337,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_003",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 22.381800052244216,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_004",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 20.640600007027388,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_005",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 20.793200004845858,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_006",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 21.971800015307963,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_007",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 25.829699996393174,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_008",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 26.12970001064241,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_009",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 26.432599988766015,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_010",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 42.58569999365136,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_011",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 26.318699994590133,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_012",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 19.008400035090744,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_hr",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_013",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 21.895800018683076,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_014",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 22.515600023325533,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_015",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 18.98669998627156,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_016",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 21.59140002913773,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_017",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 26.266600005328655,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_018",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 27.79939997708425,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_019",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 25.986300024669617,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_020",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 26.2924000271596,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_021",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 27.979500009678304,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_022",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 25.9072000044398,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_023",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 27.25700003793463,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_sec",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_024",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 21.129800006747246,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_025",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 18.617099965922534,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_026",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 14.908700017258525,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_027",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 18.150299962144345,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_028",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 24.237099976744503,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_029",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 19.735699985176325,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_fin",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_030",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 15.396000002510846,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_031",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 20.001400029286742,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_032",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 23.31580000463873,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_033",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 20.361100032459944,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_034",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 25.941100029740483,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_035",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 0.5,
+          "ndcg": 1.1309297535714575,
+          "latency_ms": 20.819999976083636,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_036",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 18.129799980670214,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_hr",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_037",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 22.27590000256896,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_038",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 19.996699993498623,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_039",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 22.672599996440113,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_040",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 26.836700038984418,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_041",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 29.641399974934757,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_sec",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_042",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.3065735963827294,
+          "latency_ms": 32.08600002108142,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_043",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.3065735963827294,
+          "latency_ms": 27.143599989358336,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_044",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.3065735963827294,
+          "latency_ms": 31.46950004156679,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_045",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 25.68240003893152,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_046",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.3065735963827294,
+          "latency_ms": 21.085400017909706,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_047",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.3065735963827294,
+          "latency_ms": 19.12030001403764,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin",
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_048",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 0.5,
+          "ndcg": 0.6934264036172708,
+          "latency_ms": 22.077999950852245,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin",
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_049",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 22.72200002335012,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_050",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 26.09549998305738,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_051",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 25.00090003013611,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_052",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.3065735963827294,
+          "latency_ms": 18.853599962312728,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_053",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 19.102999998722225,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_054",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.3065735963827294,
+          "latency_ms": 21.896899968851358,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_055",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 33.993099990766495,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_056",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 20.09050000924617,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_057",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 20.694600010756403,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_058",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 17.960399971343577,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_059",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 15.9540000022389,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_060",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 17.062600003555417,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_061",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 23.414600000251085,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_fin",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_062",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 24.397199973464012,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_063",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 27.992899995297194,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_064",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 29.182400030549616,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_065",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 18.052499974146485,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_066",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 20.27109998743981,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_067",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "mrr": 0.3333333333333333,
+          "ndcg": 0.5,
+          "latency_ms": 26.94900002097711,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_fin",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_068",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "mrr": 0.5,
+          "ndcg": 0.6309297535714575,
+          "latency_ms": 23.043800028972328,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_069",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 30.810499971266836,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_070",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 24.64189997408539,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_071",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 28.668600018136203,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_072",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 25.641200016252697,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_073",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 28.032700007315725,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_074",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 31.204400002025068,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_075",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 20.689399971161038,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_076",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 24.217799946200103,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_077",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 26.06470003956929,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_078",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 22.52340002451092,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_hr",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_079",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 23.888700001407415,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_080",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 25.564499956090003,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_091",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "mrr": 0.5,
+          "ndcg": 0.6309297535714575,
+          "latency_ms": 28.075699985492975,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_092",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 34.021399973426014,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_093",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 23.0093999998644,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_094",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 27.876799984369427,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_095",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "mrr": 0.3333333333333333,
+          "ndcg": 0.5,
+          "latency_ms": 32.50159998424351,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_096",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 32.44009998161346,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_097",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 28.304799983743578,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_098",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 20.9813000401482,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_099",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 24.988299992401153,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_100",
+          "category": "metadata",
+          "hit_rate": 0.0,
+          "recall": 0.0,
+          "precision": 0.0,
+          "mrr": 0.0,
+          "ndcg": 0.0,
+          "latency_ms": 27.945500041823834,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_fin",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        }
+      ]
+    }
+  },
+  "intermediate": {
+    "name": "Configuration B (Intermediate)",
+    "description": "Recursive chunking (800/100), Hybrid (Dense + BM25, RRF), top_k=5, no reranking",
+    "eval_result": {
+      "strategy": "hybrid",
+      "top_k": 5,
+      "has_reranker": false,
+      "total_evaluated_queries": 90,
+      "retrieval_metrics": {
+        "hit_rate_at_k": 1.0,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.6022,
+        "mrr": 0.9667,
+        "ndcg_at_k": 1.894,
+        "top_k": 5
+      },
+      "performance_metrics": {
+        "average_latency_ms": 22.62,
+        "p95_latency_ms": 29.62,
+        "total_input_tokens": 0,
+        "total_output_tokens": 0,
+        "average_tokens_per_query": 0.0,
+        "estimated_total_cost_usd": 0.0,
+        "cache_hit_rate": 0.0
+      },
+      "category_breakdown": {
+        "factual": {
+          "count": 25,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.648,
+          "mrr": 1.0
+        },
+        "numerical": {
+          "count": 15,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.5333,
+          "mrr": 1.0
+        },
+        "multi_doc": {
+          "count": 15,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.76,
+          "mrr": 0.9667
+        },
+        "contextual": {
+          "count": 15,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.52,
+          "mrr": 1.0
+        },
+        "distractor": {
+          "count": 10,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.58,
+          "mrr": 1.0
+        },
+        "metadata": {
+          "count": 10,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.5,
+          "mrr": 0.75
+        }
+      },
+      "query_evaluations": [
+        {
+          "question_id": "q_001",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 24.445900053251535,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_002",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 34.34980002930388,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_003",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 26.069200015626848,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_fin",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_004",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5616063116448506,
+          "latency_ms": 22.90580002591014,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_005",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5616063116448506,
+          "latency_ms": 16.433399985544384,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_006",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5616063116448506,
+          "latency_ms": 15.739700000267476,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_007",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 21.91010001115501,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_sec",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_008",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 21.238500019535422,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_009",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5616063116448506,
+          "latency_ms": 21.146000013686717,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_010",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5177825608059994,
+          "latency_ms": 20.80300002126023,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_011",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.0177825608059994,
+          "latency_ms": 24.697199987713248,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_hr",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_012",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 27.64069999102503,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_013",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 19.26069997716695,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_hr",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_014",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.0177825608059994,
+          "latency_ms": 16.696900012902915,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_eng",
+            "doc_hr",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_015",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 15.95689996611327,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_016",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 19.386200001463294,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_eng",
+            "doc_eng",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_017",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5177825608059994,
+          "latency_ms": 25.681199971586466,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_fin",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_018",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 27.3653999902308,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_019",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.4306765580733931,
+          "latency_ms": 27.975199976935983,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_sec",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_020",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 20.488600013777614,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_eng",
+            "doc_sec",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_021",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.0616063116448506,
+          "latency_ms": 20.54980001412332,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_sec",
+            "doc_eng",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_022",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.4484591188793923,
+          "latency_ms": 26.92209999077022,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_eng",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_023",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 30.23039997788146,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_sec",
+            "doc_fin",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_024",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 25.98279999801889,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_025",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 24.79589998256415,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_fin",
+            "doc_hr",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_026",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5616063116448506,
+          "latency_ms": 20.79270000103861,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_027",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 27.839699992910028,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_fin",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_028",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 29.001599992625415,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_fin",
+            "doc_hr",
+            "doc_fin",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_029",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 1.8868528072345416,
+          "latency_ms": 23.782100004609674,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_sec",
+            "doc_hr",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_030",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 23.89810001477599,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_fin",
+            "doc_sec",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_031",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 21.617699996568263,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_fin",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_032",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 23.28339999075979,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_sec",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_033",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 29.37850001035258,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_fin",
+            "doc_hr",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_034",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 31.97269997326657,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_eng",
+            "doc_sec",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_035",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 1.8175293653079347,
+          "latency_ms": 27.6941999909468,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_hr",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_036",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 29.118399950675666,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_hr",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_037",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.4306765580733931,
+          "latency_ms": 29.821400006767362,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_hr",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_038",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5616063116448506,
+          "latency_ms": 27.942699962295592,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_039",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 22.023600002285093,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_hr",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_040",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5177825608059994,
+          "latency_ms": 21.58219995908439,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_sec",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_041",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 1.5437713091520255,
+          "latency_ms": 26.04499994777143,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_sec",
+            "doc_sec",
+            "doc_fin",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_042",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 1.501265835341887,
+          "latency_ms": 25.14580002753064,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_sec",
+            "doc_eng",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_043",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 1.5706417189553201,
+          "latency_ms": 28.203399968333542,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_sec",
+            "doc_eng",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_044",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 1.5706417189553201,
+          "latency_ms": 28.45000004163012,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_eng",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_045",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 19.444899982772768,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_046",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.8078394317246163,
+          "latency_ms": 26.885900006163865,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_047",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.8078394317246163,
+          "latency_ms": 29.351200035307556,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_fin",
+            "doc_fin",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin",
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_048",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 20.165199995972216,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_fin",
+            "doc_eng",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin",
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_049",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 0.5,
+          "ndcg": 1.1309297535714575,
+          "latency_ms": 20.806699991226196,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_sec",
+            "doc_sec",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_050",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.4484591188793923,
+          "latency_ms": 22.42540003499016,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_sec",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_051",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 1.5437713091520255,
+          "latency_ms": 21.307700022589415,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_eng",
+            "doc_fin",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_052",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.8078394317246163,
+          "latency_ms": 21.81810000911355,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_eng",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_053",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.4306765580733931,
+          "latency_ms": 19.391399982851,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_fin",
+            "doc_fin",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_054",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.8078394317246163,
+          "latency_ms": 19.24460002919659,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_sec",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_055",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 18.370900012087077,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_eng",
+            "doc_sec",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_056",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.0616063116448506,
+          "latency_ms": 20.61220002360642,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_fin",
+            "doc_hr",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_057",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 26.232400035951287,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_eng",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_058",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 26.63199999369681,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_059",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 38.910700008273125,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_sec",
+            "doc_sec",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_060",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 28.472499980125576,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_eng",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_061",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.3868528072345416,
+          "latency_ms": 21.795100008603185,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_fin",
+            "doc_hr",
+            "doc_hr",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_062",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 19.02649999829009,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_fin",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_063",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5177825608059994,
+          "latency_ms": 24.03620001859963,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_064",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 18.604899989441037,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_hr",
+            "doc_sec",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_065",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5616063116448506,
+          "latency_ms": 16.319499991368502,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_066",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 15.766300028190017,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_sec",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_067",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.3868528072345416,
+          "latency_ms": 18.40130001073703,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_fin",
+            "doc_sec",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_068",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.3868528072345416,
+          "latency_ms": 24.43140000104904,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_069",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5177825608059994,
+          "latency_ms": 26.412899955175817,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_070",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 1.9306765580733931,
+          "latency_ms": 23.4881000360474,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_eng",
+            "doc_fin",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_071",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.2,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 21.9057000358589,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_072",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.0616063116448506,
+          "latency_ms": 16.98819996090606,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_fin",
+            "doc_sec",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_073",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5616063116448506,
+          "latency_ms": 16.656499996315688,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_074",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 16.138600010890514,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_075",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 13.001299987081438,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_fin",
+            "doc_sec",
+            "doc_eng",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_076",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5616063116448506,
+          "latency_ms": 22.154100006446242,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_077",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 27.9803000157699,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_sec",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_078",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 25.27600002940744,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_hr",
+            "doc_sec",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_079",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 1.9306765580733931,
+          "latency_ms": 18.490899994503707,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_eng",
+            "doc_eng",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_080",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5616063116448506,
+          "latency_ms": 16.354999970644712,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_091",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 0.5,
+          "ndcg": 1.0616063116448506,
+          "latency_ms": 14.245699974708259,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_eng",
+            "doc_sec",
+            "doc_eng",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_092",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 0.5,
+          "ndcg": 1.0177825608059992,
+          "latency_ms": 15.771200007293373,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_sec",
+            "doc_eng",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_093",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.3175293653079345,
+          "latency_ms": 17.630599963013083,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_fin",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_094",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.4306765580733931,
+          "latency_ms": 15.354900038801134,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_sec",
+            "doc_fin",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_095",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 0.5,
+          "ndcg": 1.0177825608059992,
+          "latency_ms": 15.525399998296052,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_sec",
+            "doc_sec",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_096",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.0616063116448506,
+          "latency_ms": 13.731300015933812,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_fin",
+            "doc_sec",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_097",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 0.5,
+          "ndcg": 1.1309297535714575,
+          "latency_ms": 16.473000054247677,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_hr",
+            "doc_sec",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_098",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.0616063116448506,
+          "latency_ms": 23.47449999069795,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_hr",
+            "doc_fin",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_099",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.0616063116448506,
+          "latency_ms": 19.35550000052899,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_fin",
+            "doc_sec",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_100",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 0.5,
+          "ndcg": 1.0616063116448506,
+          "latency_ms": 24.666199984494597,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_sec",
+            "doc_hr",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        }
+      ]
+    }
+  },
+  "optimized": {
+    "name": "Configuration C (Optimized)",
+    "description": "Recursive chunking (500/50), Hybrid (Dense + BM25, RRF), Cross-Encoder reranker, top_k=5",
+    "eval_result": {
+      "strategy": "hybrid",
+      "top_k": 5,
+      "has_reranker": true,
+      "total_evaluated_queries": 90,
+      "retrieval_metrics": {
+        "hit_rate_at_k": 1.0,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.7044,
+        "mrr": 0.987,
+        "ndcg_at_k": 2.1288,
+        "top_k": 5
+      },
+      "performance_metrics": {
+        "average_latency_ms": 744.18,
+        "p95_latency_ms": 525.42,
+        "total_input_tokens": 0,
+        "total_output_tokens": 0,
+        "average_tokens_per_query": 0.0,
+        "estimated_total_cost_usd": 0.0,
+        "cache_hit_rate": 0.0
+      },
+      "category_breakdown": {
+        "factual": {
+          "count": 25,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.792,
+          "mrr": 1.0
+        },
+        "numerical": {
+          "count": 15,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.5867,
+          "mrr": 1.0
+        },
+        "multi_doc": {
+          "count": 15,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.8267,
+          "mrr": 1.0
+        },
+        "contextual": {
+          "count": 15,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.72,
+          "mrr": 0.9556
+        },
+        "distractor": {
+          "count": 10,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.64,
+          "mrr": 1.0
+        },
+        "metadata": {
+          "count": 10,
+          "hit_rate_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.52,
+          "mrr": 0.95
+        }
+      },
+      "query_evaluations": [
+        {
+          "question_id": "q_001",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 27228.604300005827,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_002",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 336.93900000071153,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_003",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 333.477700012736,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_004",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 392.7976000122726,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_005",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 355.40539998328313,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_006",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 361.41389998374507,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_007",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.0616063116448506,
+          "latency_ms": 398.5268999822438,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_fin",
+            "doc_hr",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_008",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 455.2174999844283,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_009",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 434.54129999736324,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_010",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 509.105000004638,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_011",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 474.32090004440397,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_012",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.0616063116448506,
+          "latency_ms": 454.92240000749007,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_hr",
+            "doc_sec",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_013",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 448.597599985078,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_hr",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_014",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.4306765580733931,
+          "latency_ms": 464.3277999712154,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_hr",
+            "doc_sec",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_015",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 436.38209998607635,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_fin",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_016",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 524.7192999813706,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_017",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5616063116448506,
+          "latency_ms": 511.444500007201,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_018",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 1.9306765580733931,
+          "latency_ms": 465.88579996023327,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_eng",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_019",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.4306765580733931,
+          "latency_ms": 494.0243999590166,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_sec",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_020",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.4484591188793923,
+          "latency_ms": 468.95170002244413,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_sec",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_021",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 453.79289996344596,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_eng",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_022",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 463.8207000098191,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_023",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5616063116448506,
+          "latency_ms": 463.1876000203192,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_024",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5616063116448506,
+          "latency_ms": 521.1169000249356,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_025",
+          "category": "factual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.2,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 456.155099964235,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_026",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 442.39380001090467,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_027",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 446.2578999809921,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_028",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.0177825608059994,
+          "latency_ms": 444.20159998117015,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_fin",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_029",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.0616063116448506,
+          "latency_ms": 461.05360001092777,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_fin",
+            "doc_hr",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_030",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 452.81240000622347,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_fin",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_031",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 464.7312000161037,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_eng",
+            "doc_fin",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_032",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.2,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 459.765299980063,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_eng",
+            "doc_eng",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_033",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 534.6539000165649,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_hr",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_034",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 567.9970000055619,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_eng",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_035",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.2,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 554.3024999788031,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_hr",
+            "doc_hr",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_036",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.3868528072345416,
+          "latency_ms": 495.25229999562725,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_hr",
+            "doc_fin",
+            "doc_hr",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_037",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.0177825608059994,
+          "latency_ms": 469.07590003684163,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_sec",
+            "doc_fin",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_038",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.2,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 431.25140003394336,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_039",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 439.8042000248097,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_040",
+          "category": "numerical",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 473.3087999629788,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_041",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 1.5437713091520255,
+          "latency_ms": 472.1801999839954,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_sec",
+            "doc_hr",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_042",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 1.501265835341887,
+          "latency_ms": 469.0577000146732,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_eng",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_043",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.8078394317246163,
+          "latency_ms": 411.11099999397993,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_sec",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_044",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 1.5706417189553201,
+          "latency_ms": 464.18290003202856,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_045",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 411.1984000192024,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_046",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.8078394317246163,
+          "latency_ms": 475.5108999670483,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_047",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.8078394317246163,
+          "latency_ms": 407.3211000068113,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_fin",
+            "doc_hr",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin",
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_048",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 1.5437713091520255,
+          "latency_ms": 416.87949997140095,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_fin",
+            "doc_fin",
+            "doc_sec",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin",
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_049",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 468.56329997535795,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_hr",
+            "doc_sec",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_050",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 443.63270001485944,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_051",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.8078394317246163,
+          "latency_ms": 454.591799993068,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_eng",
+            "doc_sec",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_052",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.8078394317246163,
+          "latency_ms": 493.0975000024773,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_eng",
+            "doc_sec",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_053",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.0177825608059994,
+          "latency_ms": 458.86309997877106,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_fin",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_054",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 1.264068122572591,
+          "latency_ms": 456.9665999733843,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_hr",
+            "doc_sec",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec",
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_055",
+          "category": "multi_doc",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 1.8175293653079347,
+          "latency_ms": 468.5425999923609,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_sec",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_056",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 451.6494999988936,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_fin",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_057",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 413.8946000020951,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_058",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 399.62400001240894,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_eng",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_059",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 0.3333333333333333,
+          "ndcg": 0.9306765580733931,
+          "latency_ms": 445.4255000455305,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_eng",
+            "doc_eng",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_060",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5616063116448506,
+          "latency_ms": 413.28710003290325,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_061",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 425.92300003161654,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_062",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 441.9717999990098,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_063",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 416.4207999710925,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_064",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.2,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 525.9861000231467,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_065",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 435.3465000167489,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_066",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.0177825608059994,
+          "latency_ms": 492.917200026568,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_eng",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_067",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 523.0565000092611,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_eng",
+            "doc_sec",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_068",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.4306765580733931,
+          "latency_ms": 463.2776000071317,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_sec",
+            "doc_eng",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_069",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 414.79740000795573,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_070",
+          "category": "contextual",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 469.80420005274937,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_071",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.2,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "latency_ms": 457.12650002678856,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_072",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 444.28049999987707,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_hr",
+            "doc_hr",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_073",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 436.46589998388663,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_074",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 446.20230002328753,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_fin",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_075",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 413.85320003610104,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_eng",
+            "doc_eng",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_076",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.5616063116448506,
+          "latency_ms": 390.8285000361502,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_077",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.0616063116448506,
+          "latency_ms": 390.2632999815978,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_hr",
+            "doc_fin",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_078",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 2.1309297535714578,
+          "latency_ms": 410.9955999883823,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_sec",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_079",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.4484591188793923,
+          "latency_ms": 449.30860004387796,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_eng",
+            "doc_sec",
+            "doc_eng",
+            "doc_eng"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_080",
+          "category": "distractor",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mrr": 1.0,
+          "ndcg": 2.9484591188793923,
+          "latency_ms": 507.9616999719292,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_091",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.4306765580733931,
+          "latency_ms": 417.1011000289582,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_hr",
+            "doc_eng",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_092",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.3868528072345416,
+          "latency_ms": 406.27680002944544,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_fin",
+            "doc_sec",
+            "doc_eng",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_093",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 431.9025999866426,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_sec",
+            "doc_fin",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_094",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 1.8175293653079347,
+          "latency_ms": 396.45559998461977,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_sec",
+            "doc_hr",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_095",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.5,
+          "latency_ms": 411.9811999844387,
+          "retrieved_doc_ids": [
+            "doc_eng",
+            "doc_sec",
+            "doc_eng",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_eng"
+          ]
+        },
+        {
+          "question_id": "q_096",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 1.0,
+          "ndcg": 1.6309297535714575,
+          "latency_ms": 362.9149000043981,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_sec",
+            "doc_hr",
+            "doc_hr",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_097",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.6,
+          "mrr": 1.0,
+          "ndcg": 1.8868528072345416,
+          "latency_ms": 391.1540000117384,
+          "retrieved_doc_ids": [
+            "doc_hr",
+            "doc_fin",
+            "doc_hr",
+            "doc_sec",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        },
+        {
+          "question_id": "q_098",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.4484591188793923,
+          "latency_ms": 413.1465000100434,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_fin",
+            "doc_hr",
+            "doc_fin",
+            "doc_fin"
+          ],
+          "relevant_doc_ids": [
+            "doc_fin"
+          ]
+        },
+        {
+          "question_id": "q_099",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.8,
+          "mrr": 1.0,
+          "ndcg": 2.3175293653079345,
+          "latency_ms": 422.2544999793172,
+          "retrieved_doc_ids": [
+            "doc_sec",
+            "doc_eng",
+            "doc_sec",
+            "doc_sec",
+            "doc_sec"
+          ],
+          "relevant_doc_ids": [
+            "doc_sec"
+          ]
+        },
+        {
+          "question_id": "q_100",
+          "category": "metadata",
+          "hit_rate": 1.0,
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 0.5,
+          "ndcg": 1.0177825608059992,
+          "latency_ms": 426.43089999910444,
+          "retrieved_doc_ids": [
+            "doc_fin",
+            "doc_hr",
+            "doc_sec",
+            "doc_eng",
+            "doc_hr"
+          ],
+          "relevant_doc_ids": [
+            "doc_hr"
+          ]
+        }
+      ]
+    }
+  }
+}
